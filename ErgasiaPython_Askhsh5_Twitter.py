@@ -7,8 +7,6 @@ import re
 import string
 import io
 
-from collections import Counter
-
 api = twitter.Api(consumer_key='ijOlrKeQM01CAInRVd1h5IYOT',
   consumer_secret='dFKTla9ixXjZMNl0AVn9zcHRP7w97sJXqUHRBrvPuFn3qxLhII',
   access_token_key='965315716982468610-hggFgDM1HszrLWYAb6JrTiIrPwNUJIy',
@@ -35,7 +33,7 @@ match_pattern = re.findall(r'\b[a-ω]{4,25}\b', text_string)#Λέξεις με �
 #Max = Counter(match_pattern).most_common(1)
 #print ("Emfanizetai pio syxna h leksh:\n")
 #print (Max)
-#με το ίδιο αποτέλεσμα.
+#(χρησιμοποιώντας την from collections import Counter) με το ίδιο αποτέλεσμα.
 
  
 for word in match_pattern:
